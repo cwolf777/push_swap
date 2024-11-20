@@ -1,7 +1,7 @@
 CC = gcc
 CFLAGS = -Wall -Wextra -Werror
 NAME = push_swap
-SOURCES = push_swap.c instructions.c printf_list.c init_list_a.c error_checks.c ft_atolo.c
+SOURCES = push_swap.c printf_list.c init_list_a.c error_checks.c ft_atolo.c swap.c push.c rotate.c reverse_rotate.c
 LIBFT_DIR = ./libft
 LIBFT = $(LIBFT_DIR)/libft.
 OBJECTS = $(SOURCES:.c=.o)

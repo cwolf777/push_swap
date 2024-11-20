@@ -6,7 +6,7 @@
 /*   By: cwolf <cwolf@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/11/15 09:59:15 by cwolf             #+#    #+#             */
-/*   Updated: 2024/11/19 17:55:51 by cwolf            ###   ########.fr       */
+/*   Updated: 2024/11/20 13:44:59 by cwolf            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -28,8 +28,15 @@ int	main(int argc, char *argv[])
 	else
 		args = argv + 1;
 	init_list_a(&a, args);
+	print_list(a);
+	pb(&b, &a);
+	pb(&b, &a);
+	pb(&b, &a);
+	pb(&b, &a);
+	pb(&b, &a);
+	rrr(&a, &b);
+	print_list(a);
 	print_list(b);
-	
 	//check ob Stack 'a' sortiert ist
 		//if not
 			//Checken ob es 2 nodes gibt in 'a'

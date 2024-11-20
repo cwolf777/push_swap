@@ -6,7 +6,7 @@
 /*   By: cwolf <cwolf@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/11/19 11:00:06 by cwolf             #+#    #+#             */
-/*   Updated: 2024/11/19 15:16:04 by cwolf            ###   ########.fr       */
+/*   Updated: 2024/11/20 13:51:02 by cwolf            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -44,6 +44,8 @@ static void	attach_node(t_ps_list **a, int n)
 	if (a == NULL)
 		return ;
 	node = newnode(n);
+	if (node == NULL)
+		free_list(a);
 	if (*a == NULL)
 		*a = node;
 	else
