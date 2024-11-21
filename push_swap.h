@@ -6,7 +6,7 @@
 /*   By: cwolf <cwolf@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/11/15 10:07:51 by cwolf             #+#    #+#             */
-/*   Updated: 2024/11/20 13:41:07 by cwolf            ###   ########.fr       */
+/*   Updated: 2024/11/21 21:00:51 by cwolf            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -50,5 +50,13 @@ void		rb(t_ps_list **b);
 void		rra(t_ps_list **a);
 void		rrb(t_ps_list **b);
 void		rrr(t_ps_list **a, t_ps_list **b);
+int			in_order(t_ps_list **list);
+int			two_nodes(t_ps_list **list);
+int			three_nodes(t_ps_list **list);
+int			count_list_len(t_ps_list **list);
+void		sort_three(t_ps_list **list);
+void		update_notes(t_ps_list **a, t_ps_list **b);
+t_ps_list	*find_max(t_ps_list **list);
+void		turk_algorithm(t_ps_list **a, t_ps_list **b);
 
-# endif
+#endif

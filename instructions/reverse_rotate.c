@@ -1,43 +1,50 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   rotate.c                                           :+:      :+:    :+:   */
+/*   reverse_rotate.c                                   :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: cwolf <cwolf@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2024/11/20 10:53:58 by cwolf             #+#    #+#             */
-/*   Updated: 2024/11/20 13:21:50 by cwolf            ###   ########.fr       */
+/*   Created: 2024/11/20 13:20:05 by cwolf             #+#    #+#             */
+/*   Updated: 2024/11/21 18:37:35 by cwolf            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "push_swap.h"
+#include "../push_swap.h"
 
 static t_ps_list	*ft_listlast(t_ps_list *list);
 
-void	rotate(t_ps_list **list)
+static	void	reverse_rotate(t_ps_list **list)
 {
-	t_ps_list	*first_node;
 	t_ps_list	*last_node;
+	t_ps_list	*first_node;
 
 	if (!(list) || !(*list) || !((*list)->next))
 		return ;
-	first_node = *list;
 	last_node = ft_listlast(*list);
-	*list = first_node->next;
-	(*list)->prev = NULL;
-	last_node->next = first_node;
+	first_node = *list;
 	first_node->prev = last_node;
-	first_node->next = NULL;
+	if (last_node->prev != NULL)
+		last_node->prev->next = NULL;
+	last_node->prev = NULL;
+	last_node->next = first_node;
+	*list = last_node;
 }
 
-void	ra(t_ps_list **a)
+void	rra(t_ps_list **a)
 {
-	rotate(a);
+	reverse_rotate(a);
 }
 
-void	rb(t_ps_list **b)
+void	rrb(t_ps_list **b)
 {
-	rotate(b);
+	reverse_rotate(b);
+}
+
+void	rrr(t_ps_list **a, t_ps_list **b)
+{
+	reverse_rotate(a);
+	reverse_rotate(b);
 }
 
 static t_ps_list	*ft_listlast(t_ps_list *list)

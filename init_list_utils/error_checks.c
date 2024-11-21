@@ -6,11 +6,11 @@
 /*   By: cwolf <cwolf@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/11/19 10:24:12 by cwolf             #+#    #+#             */
-/*   Updated: 2024/11/20 07:18:34 by cwolf            ###   ########.fr       */
+/*   Updated: 2024/11/21 18:41:59 by cwolf            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "push_swap.h"
+#include "../push_swap.h"
 
 int	check_syntax(char *str)
 {

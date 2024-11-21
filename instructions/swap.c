@@ -6,11 +6,11 @@
 /*   By: cwolf <cwolf@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/11/20 08:01:44 by cwolf             #+#    #+#             */
-/*   Updated: 2024/11/20 08:26:49 by cwolf            ###   ########.fr       */
+/*   Updated: 2024/11/21 18:37:43 by cwolf            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "push_swap.h"
+#include "../push_swap.h"
 
 static void	swap(t_ps_list **list)
 {
