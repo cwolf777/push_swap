@@ -1,36 +1,29 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   sort_three.c                                       :+:      :+:    :+:   */
+/*   find_cheapest.c                                    :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: cwolf <cwolf@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2024/11/21 08:54:06 by cwolf             #+#    #+#             */
-/*   Updated: 2024/11/22 19:24:43 by cwolf            ###   ########.fr       */
+/*   Created: 2024/11/22 17:51:17 by cwolf             #+#    #+#             */
+/*   Updated: 2024/11/22 17:54:05 by cwolf            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "../push_swap.h"
 
-void	sort_three(t_ps_list **list)
+t_ps_list	*find_cheapest(t_ps_list **list)
 {
 	t_ps_list	*current;
 
+	if (!list || !(*list))
+		return (NULL);
 	current = *list;
-	if (in_order(list) == 1)
-		return ;
-	if (current->nbr > current->next->nbr
-		&& current->nbr > current->next->next->nbr)
+	while (current != NULL)
 	{
-		ra(list);
-		if (in_order(list) == 1)
-			return ;
+		if (current->cheapest == 1)
+			return (current);
+		current = current->next;
 	}
-	else if (current->next->nbr > current->next->next->nbr)
-	{
-		rra(list);
-		if (in_order(list) == 1)
-			return ;
-	}
-	sa(list);
+	return (NULL);
 }

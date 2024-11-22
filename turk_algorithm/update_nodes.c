@@ -6,7 +6,7 @@
 /*   By: cwolf <cwolf@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/11/21 19:46:46 by cwolf             #+#    #+#             */
-/*   Updated: 2024/11/21 22:22:14 by cwolf            ###   ########.fr       */
+/*   Updated: 2024/11/22 18:22:13 by cwolf            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,7 +14,7 @@
 
 static void	update_cheapest(t_ps_list	**list);
 static void	update_push_cost(t_ps_list **a, t_ps_list **b);
-static void	update_index_median(t_ps_list **list);
+void		update_index_median(t_ps_list **list);
 static void	update_target(t_ps_list **a, t_ps_list **b);
 
 void	update_notes(t_ps_list **a, t_ps_list **b)
@@ -26,7 +26,7 @@ void	update_notes(t_ps_list **a, t_ps_list **b)
 	update_cheapest(a);
 }
 
-static void	update_index_median(t_ps_list **list)
+void	update_index_median(t_ps_list **list)
 {
 	t_ps_list	*current;
 	int			index;

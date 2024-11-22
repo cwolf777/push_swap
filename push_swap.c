@@ -6,7 +6,7 @@
 /*   By: cwolf <cwolf@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/11/15 09:59:15 by cwolf             #+#    #+#             */
-/*   Updated: 2024/11/21 22:25:10 by cwolf            ###   ########.fr       */
+/*   Updated: 2024/11/22 19:28:43 by cwolf            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -36,13 +36,8 @@ int	main(int argc, char *argv[])
 			sort_three(&a);
 		else
 			turk_algorithm(&a, &b);
-		// print_list(a);
-		// print_list(b);
-		// printf("Index: %d\n", a->next->next->next->next->next->next->index);
-		// printf("Value: %d\n", a->next->next->next->next->next->next->nbr);
-		// printf("Value von Target: %d\n", a->next->next->next->next->next->next->target_node->nbr);
-		// printf("Cheapest: %d\n", a->next->next->next->next->next->next->cheapest);
-		// printf("Push Cost: %d\n", a->next->next->next->next->next->next->push_cost);
-		// printf("Pointer von richtiger Target Node: %p\n", b);
+		printf("Last output: \n");
+		print_list(a);
+		print_list(b);
 	}
 }
