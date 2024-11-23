@@ -6,7 +6,7 @@
 /*   By: cwolf <cwolf@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/11/22 18:03:13 by cwolf             #+#    #+#             */
-/*   Updated: 2024/11/22 18:45:35 by cwolf            ###   ########.fr       */
+/*   Updated: 2024/11/23 09:31:11 by cwolf            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -34,13 +34,13 @@ void	reverse_rotate_both(t_ps_list **a, t_ps_list **b,
 	update_index_median(b);
 }
 
-void	check_top_of_list_a(t_ps_list **a, t_ps_list *cheapest_node)
+void	check_top_of_list_a(t_ps_list **a, t_ps_list *top_node)
 {
-	if (!a || !(*a) || !cheapest_node)
+	if (!a || !(*a) || !top_node)
 		return ;
-	while (*a != cheapest_node)
+	while (*a != top_node)
 	{
-		if (cheapest_node->above_median == 1)
+		if (top_node->above_median == 1)
 			ra(a);
 		else
 			rra(a);

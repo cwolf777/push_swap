@@ -6,7 +6,7 @@
 /*   By: cwolf <cwolf@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/11/15 10:07:51 by cwolf             #+#    #+#             */
-/*   Updated: 2024/11/22 18:35:57 by cwolf            ###   ########.fr       */
+/*   Updated: 2024/11/23 09:41:35 by cwolf            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -56,8 +56,9 @@ int			two_nodes(t_ps_list **list);
 int			three_nodes(t_ps_list **list);
 int			count_list_len(t_ps_list **list);
 void		sort_three(t_ps_list **list);
-void		update_notes(t_ps_list **a, t_ps_list **b);
+void		update_notes_a(t_ps_list **a, t_ps_list **b);
 t_ps_list	*find_max(t_ps_list **list);
+t_ps_list	*find_min(t_ps_list **list);
 void		turk_algorithm(t_ps_list **a, t_ps_list **b);
 t_ps_list	*find_cheapest(t_ps_list **list);
 void		update_index_median(t_ps_list **list);
@@ -66,5 +67,7 @@ void		reverse_rotate_both(t_ps_list **a, t_ps_list **b,
 				t_ps_list *cheapest_node);
 void		check_top_of_list_a(t_ps_list **a, t_ps_list *cheapest_node);
 void		check_top_of_list_b(t_ps_list **b, t_ps_list *cheapest_node);
+void		update_nodes_b(t_ps_list **a, t_ps_list **b);
+void		start_with_min(t_ps_list **list);
 
 #endif

@@ -6,7 +6,7 @@
 /*   By: cwolf <cwolf@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/11/15 09:59:15 by cwolf             #+#    #+#             */
-/*   Updated: 2024/11/22 19:28:43 by cwolf            ###   ########.fr       */
+/*   Updated: 2024/11/23 10:30:36 by cwolf            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -36,7 +36,6 @@ int	main(int argc, char *argv[])
 			sort_three(&a);
 		else
 			turk_algorithm(&a, &b);
-		printf("Last output: \n");
 		print_list(a);
 		print_list(b);
 	}

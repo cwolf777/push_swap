@@ -1,12 +1,12 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   update_nodes.c                                     :+:      :+:    :+:   */
+/*   update_nodes_a.c                                   :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: cwolf <cwolf@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/11/21 19:46:46 by cwolf             #+#    #+#             */
-/*   Updated: 2024/11/22 18:22:13 by cwolf            ###   ########.fr       */
+/*   Updated: 2024/11/23 08:15:07 by cwolf            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,7 +17,7 @@ static void	update_push_cost(t_ps_list **a, t_ps_list **b);
 void		update_index_median(t_ps_list **list);
 static void	update_target(t_ps_list **a, t_ps_list **b);
 
-void	update_notes(t_ps_list **a, t_ps_list **b)
+void	update_notes_a(t_ps_list **a, t_ps_list **b)
 {
 	update_index_median(a);
 	update_index_median(b);
