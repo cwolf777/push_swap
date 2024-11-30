@@ -6,7 +6,7 @@
 /*   By: cwolf <cwolf@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/11/20 08:01:44 by cwolf             #+#    #+#             */
-/*   Updated: 2024/11/21 18:37:43 by cwolf            ###   ########.fr       */
+/*   Updated: 2024/11/29 15:52:14 by cwolf            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -32,16 +32,20 @@ static void	swap(t_ps_list **list)
 
 void	sa(t_ps_list **a)
 {
+	ft_printf("sa\n");
 	swap(a);
 }
 
 void	sb(t_ps_list **b)
 {
+	ft_printf("sb\n");
 	swap(b);
 }
 
 void	ss(t_ps_list **a, t_ps_list **b)
 {
+	//flag 1 wenn ss abgerufen, damit bei a und b nicht gedruckt wird 
+	ft_printf("ss\n");
 	swap(a);
 	swap(b);
 }

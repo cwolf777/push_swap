@@ -6,7 +6,7 @@
 /*   By: cwolf <cwolf@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/11/20 10:53:58 by cwolf             #+#    #+#             */
-/*   Updated: 2024/11/22 18:15:27 by cwolf            ###   ########.fr       */
+/*   Updated: 2024/11/29 15:53:14 by cwolf            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -32,16 +32,20 @@ void	rotate(t_ps_list **list)
 
 void	ra(t_ps_list **a)
 {
+	ft_printf("ra\n");
 	rotate(a);
 }
 
 void	rb(t_ps_list **b)
 {
+	ft_printf("rb\n");
 	rotate(b);
 }
 
 void	rr(t_ps_list **a, t_ps_list **b)
 {
+	//flag 1 wenn ss abgerufen, damit bei a und b nicht gedruckt wird
+	ft_printf("rr\n");
 	rotate(a);
 	rotate(b);
 }

@@ -6,7 +6,7 @@
 /*   By: cwolf <cwolf@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/11/20 09:22:44 by cwolf             #+#    #+#             */
-/*   Updated: 2024/11/21 18:37:25 by cwolf            ###   ########.fr       */
+/*   Updated: 2024/11/29 15:54:14 by cwolf            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -31,10 +31,12 @@ static void	push(t_ps_list **dst, t_ps_list **src)
 
 void	pa(t_ps_list **a, t_ps_list **b)
 {
+	ft_printf("pa\n");
 	push(a, b);
 }
 
 void	pb(t_ps_list **b, t_ps_list **a)
 {
+	ft_printf("pb\n");
 	push(b, a);
 }

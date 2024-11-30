@@ -6,7 +6,7 @@
 /*   By: cwolf <cwolf@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/11/20 13:20:05 by cwolf             #+#    #+#             */
-/*   Updated: 2024/11/21 18:37:35 by cwolf            ###   ########.fr       */
+/*   Updated: 2024/11/30 11:04:56 by cwolf            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -33,16 +33,19 @@ static	void	reverse_rotate(t_ps_list **list)
 
 void	rra(t_ps_list **a)
 {
+	ft_printf("rra\n");
 	reverse_rotate(a);
 }
 
 void	rrb(t_ps_list **b)
 {
+	ft_printf("rrb\n");
 	reverse_rotate(b);
 }
 
 void	rrr(t_ps_list **a, t_ps_list **b)
 {
+	ft_printf("rrr\n");
 	reverse_rotate(a);
 	reverse_rotate(b);
 }

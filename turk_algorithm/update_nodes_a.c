@@ -6,15 +6,15 @@
 /*   By: cwolf <cwolf@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/11/21 19:46:46 by cwolf             #+#    #+#             */
-/*   Updated: 2024/11/23 08:15:07 by cwolf            ###   ########.fr       */
+/*   Updated: 2024/11/30 10:00:53 by cwolf            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "../push_swap.h"
 
-static void	update_cheapest(t_ps_list	**list);
-static void	update_push_cost(t_ps_list **a, t_ps_list **b);
+void		update_cheapest(t_ps_list	**list);
 void		update_index_median(t_ps_list **list);
+static void	update_push_cost(t_ps_list **a, t_ps_list **b);
 static void	update_target(t_ps_list **a, t_ps_list **b);
 
 void	update_notes_a(t_ps_list **a, t_ps_list **b)
@@ -104,7 +104,7 @@ static void	update_push_cost(t_ps_list **a, t_ps_list **b)
 	}
 }
 
-static void	update_cheapest(t_ps_list	**list)
+void	update_cheapest(t_ps_list	**list)
 {
 	t_ps_list	*current;
 	t_ps_list	*cheapest_node;

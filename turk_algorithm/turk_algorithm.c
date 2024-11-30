@@ -6,7 +6,7 @@
 /*   By: cwolf <cwolf@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/11/21 19:20:16 by cwolf             #+#    #+#             */
-/*   Updated: 2024/11/23 10:28:19 by cwolf            ###   ########.fr       */
+/*   Updated: 2024/11/30 11:31:12 by cwolf            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -44,18 +44,30 @@ static void	move_a_to_b(t_ps_list **a, t_ps_list **b)
 	if (!cheapest_node || !cheapest_node->target_node)
 		return ;
 	if (cheapest_node->above_median == 1
-		&& cheapest_node->target_node->above_median == 0)
+		&& cheapest_node->target_node->above_median == 1)
 		rotate_both(a, b, cheapest_node);
 	else if (cheapest_node->above_median == 0
 		&& cheapest_node->target_node->above_median == 0)
 		reverse_rotate_both(a, b, cheapest_node);
-	check_top_of_list_a(a, cheapest_node);
-	check_top_of_list_b(b, cheapest_node);
+	check_top_of_list_a_1(a, cheapest_node);
+	check_top_of_list_b_1(b, cheapest_node);
 	pb(b, a);
 }
 
 static void	move_b_to_a(t_ps_list **a, t_ps_list **b)
 {
-	check_top_of_list_a(a, (*b)->target_node);
+	t_ps_list	*cheapest_node;
+
+	cheapest_node = find_cheapest(b);
+	if (!cheapest_node || !cheapest_node->target_node)
+		return ;
+	if (cheapest_node->above_median == 1
+		&& cheapest_node->target_node->above_median == 1)
+		rotate_both_b(a, b, cheapest_node);
+	else if (cheapest_node->above_median == 0
+		&& cheapest_node->target_node->above_median == 0)
+		reverse_rotate_both_b(a, b, cheapest_node);
+	check_top_of_list_b_2(b, cheapest_node);
+	check_top_of_list_a_2(a, cheapest_node);
 	pa(a, b);
 }

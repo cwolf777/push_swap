@@ -6,11 +6,13 @@
 /*   By: cwolf <cwolf@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/11/15 09:59:15 by cwolf             #+#    #+#             */
-/*   Updated: 2024/11/23 10:30:36 by cwolf            ###   ########.fr       */
+/*   Updated: 2024/11/30 11:02:21 by cwolf            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "push_swap.h"
+
+// static void	print_list(t_ps_list *head);
 
 int	main(int argc, char *argv[])
 {
@@ -36,7 +38,28 @@ int	main(int argc, char *argv[])
 			sort_three(&a);
 		else
 			turk_algorithm(&a, &b);
-		print_list(a);
-		print_list(b);
 	}
+	// print_list(a);
+	// print_list(b);
 }
+
+// static void print_list(t_ps_list *head)
+// {
+//     t_ps_list *current = head;
+
+//     // Überprüfen, ob die Liste leer ist
+//     if (!head)
+//     {
+//         printf("Die Liste ist leer.\n");
+//         return;
+//     }
+
+//     // Iteriere durch die Liste und drucke die Werte
+//     printf("Liste: ");
+//     while (current != NULL)
+//     {
+//         printf("%d -> ", current->nbr);
+//         current = current->next;
+//     }
+//     printf("NULL\n"); // Am Ende der Liste
+// }

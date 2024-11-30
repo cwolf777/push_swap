@@ -6,7 +6,7 @@
 /*   By: cwolf <cwolf@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/11/15 10:07:51 by cwolf             #+#    #+#             */
-/*   Updated: 2024/11/23 09:41:35 by cwolf            ###   ########.fr       */
+/*   Updated: 2024/11/30 10:45:50 by cwolf            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -30,7 +30,7 @@ typedef struct structure
 	struct structure	*prev;
 }	t_ps_list;
 
-void		print_list(t_ps_list *head);
+//void		print_list(t_ps_list *head);
 
 int			check_syntax(char *str);
 int			check_duplicate(t_ps_list *a, int n);
@@ -65,9 +65,16 @@ void		update_index_median(t_ps_list **list);
 void		rotate_both(t_ps_list **a, t_ps_list **b, t_ps_list *cheapest_node);
 void		reverse_rotate_both(t_ps_list **a, t_ps_list **b,
 				t_ps_list *cheapest_node);
-void		check_top_of_list_a(t_ps_list **a, t_ps_list *cheapest_node);
-void		check_top_of_list_b(t_ps_list **b, t_ps_list *cheapest_node);
+void		check_top_of_list_a_1(t_ps_list **a, t_ps_list *cheapest_node);
+void		check_top_of_list_b_1(t_ps_list **b, t_ps_list *cheapest_node);
+void		check_top_of_list_a_2(t_ps_list **a, t_ps_list *top_node);
+void		check_top_of_list_b_2(t_ps_list **a, t_ps_list *top_node);
 void		update_nodes_b(t_ps_list **a, t_ps_list **b);
 void		start_with_min(t_ps_list **list);
+void		update_cheapest(t_ps_list	**list);
+void		rotate_both_b(t_ps_list **a, t_ps_list **b,
+				t_ps_list *cheapest_node);
+void		reverse_rotate_both_b(t_ps_list **a, t_ps_list **b,
+				t_ps_list *cheapest_node);
 
 #endif

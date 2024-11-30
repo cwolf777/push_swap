@@ -6,7 +6,7 @@
 /*   By: cwolf <cwolf@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/11/19 10:24:12 by cwolf             #+#    #+#             */
-/*   Updated: 2024/11/21 18:41:59 by cwolf            ###   ########.fr       */
+/*   Updated: 2024/11/29 17:41:34 by cwolf            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -57,6 +57,6 @@ void	free_list(t_ps_list **a)
 		current = temp;
 	}
 	*a = NULL;
-	ft_printf("Error\n");
+	ft_putstr_fd("Error\n", 2);
 	exit(1);
 }
