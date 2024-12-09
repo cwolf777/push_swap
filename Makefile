@@ -11,7 +11,7 @@ OBJECTS = $(SOURCES:.c=.o)
 
 all:$(NAME)
 
-$(NAME): $(OBJECTS) $(LIBFT) 
+$(NAME): $(OBJECTS) $(LIBFT)  
 	$(CC) $(CFLAGS) $(OBJECTS) -L$(LIBFT_DIR) -lft -o $(NAME)
 
 $(LIBFT):

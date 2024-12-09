@@ -6,7 +6,7 @@
 /*   By: cwolf <cwolf@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/11/15 09:59:15 by cwolf             #+#    #+#             */
-/*   Updated: 2024/11/30 11:02:21 by cwolf            ###   ########.fr       */
+/*   Updated: 2024/12/09 18:30:41 by cwolf            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -23,8 +23,8 @@ int	main(int argc, char *argv[])
 	args = NULL;
 	a = NULL;
 	b = NULL;
-	if (argc == 1 || (argc == 2 && argv[1][0] == '\0'))
-		return (1);
+	if (argc == 1)
+		exit (1);
 	if (argc == 2)
 		args = ft_split(argv[1], ' ');
 	else
@@ -39,22 +39,18 @@ int	main(int argc, char *argv[])
 		else
 			turk_algorithm(&a, &b);
 	}
-	// print_list(a);
-	// print_list(b);
 }
 
 // static void print_list(t_ps_list *head)
 // {
 //     t_ps_list *current = head;
 
-//     // Überprüfen, ob die Liste leer ist
 //     if (!head)
 //     {
 //         printf("Die Liste ist leer.\n");
 //         return;
 //     }
 
-//     // Iteriere durch die Liste und drucke die Werte
 //     printf("Liste: ");
 //     while (current != NULL)
 //     {
