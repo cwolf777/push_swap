@@ -6,7 +6,7 @@
 /*   By: cwolf <cwolf@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/11/15 09:59:15 by cwolf             #+#    #+#             */
-/*   Updated: 2024/12/09 18:30:41 by cwolf            ###   ########.fr       */
+/*   Updated: 2024/12/10 08:38:16 by cwolf            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -39,6 +39,7 @@ int	main(int argc, char *argv[])
 		else
 			turk_algorithm(&a, &b);
 	}
+	return (0);
 }
 
 // static void print_list(t_ps_list *head)
