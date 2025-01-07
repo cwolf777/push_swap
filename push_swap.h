@@ -6,7 +6,7 @@
 /*   By: cwolf <cwolf@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/11/15 10:07:51 by cwolf             #+#    #+#             */
-/*   Updated: 2024/11/30 10:45:50 by cwolf            ###   ########.fr       */
+/*   Updated: 2025/01/07 15:47:19 by cwolf            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -18,19 +18,17 @@
 # include "./libft/libft.h"
 # include <stdio.h>
 
-typedef struct structure
+typedef struct s_ps_list
 {
 	int					nbr;
 	int					index;
 	int					push_cost;
 	int					above_median;
 	int					cheapest;
-	struct structure	*target_node;
-	struct structure	*next;
-	struct structure	*prev;
+	struct s_ps_list	*target_node;
+	struct s_ps_list	*next;
+	struct s_ps_list	*prev;
 }	t_ps_list;
-
-//void		print_list(t_ps_list *head);
 
 int			check_syntax(char *str);
 int			check_duplicate(t_ps_list *a, int n);
@@ -76,5 +74,6 @@ void		rotate_both_b(t_ps_list **a, t_ps_list **b,
 				t_ps_list *cheapest_node);
 void		reverse_rotate_both_b(t_ps_list **a, t_ps_list **b,
 				t_ps_list *cheapest_node);
+void		free_list_end(t_ps_list **a);
 
 #endif
