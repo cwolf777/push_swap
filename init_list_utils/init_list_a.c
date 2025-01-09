@@ -6,7 +6,7 @@
 /*   By: cwolf <cwolf@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/11/19 11:00:06 by cwolf             #+#    #+#             */
-/*   Updated: 2025/01/07 09:20:52 by cwolf            ###   ########.fr       */
+/*   Updated: 2025/01/09 09:23:57 by cwolf            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,6 +15,37 @@
 static void			attach_node(t_ps_list **a, int n);
 static t_ps_list	*find_last_node(t_ps_list *a);
 static t_ps_list	*newnode(int content);
+void				init_list_a(t_ps_list **a, char **args);
+void				init_list_malloced(t_ps_list **a, char **args);
+
+void	init_list_malloced(t_ps_list **a, char **args)
+{
+	long	n;
+	int		i;
+
+	i = 0;
+	while (args[i] != NULL)
+	{
+		if (check_syntax(args[i]) == 1)
+		{
+			free_list(a);
+			free_args(args);
+		}
+		n = ft_atolo(args[i]);
+		if (n > INT_MAX || n < INT_MIN)
+		{
+			free_list(a);
+			free_args(args);
+		}
+		if (check_duplicate(*a, ((int)n)) == 1)
+		{
+			free_list(a);
+			free_args(args);
+		}
+		attach_node(a, (int)n);
+		i++;
+	}
+}
 
 void	init_list_a(t_ps_list **a, char **args)
 {

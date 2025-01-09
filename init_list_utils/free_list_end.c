@@ -6,7 +6,7 @@
 /*   By: cwolf <cwolf@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/12/17 16:08:48 by cwolf             #+#    #+#             */
-/*   Updated: 2025/01/07 09:44:45 by cwolf            ###   ########.fr       */
+/*   Updated: 2025/01/09 09:18:41 by cwolf            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -29,4 +29,19 @@ void	free_list_end(t_ps_list **a)
 	}
 	*a = NULL;
 	return ;
+}
+
+void	free_args(char **args)
+{
+	int	i;
+
+	if (!args)
+		return ;
+	i = 0;
+	while (args[i])
+	{
+		free(args[i]);
+		i++;
+	}
+	free(args);
 }
