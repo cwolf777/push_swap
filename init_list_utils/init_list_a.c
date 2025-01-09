@@ -6,7 +6,7 @@
 /*   By: cwolf <cwolf@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/11/19 11:00:06 by cwolf             #+#    #+#             */
-/*   Updated: 2025/01/09 09:23:57 by cwolf            ###   ########.fr       */
+/*   Updated: 2025/01/09 11:59:09 by cwolf            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -28,19 +28,19 @@ void	init_list_malloced(t_ps_list **a, char **args)
 	{
 		if (check_syntax(args[i]) == 1)
 		{
-			free_list(a);
 			free_args(args);
+			free_list(a);
 		}
 		n = ft_atolo(args[i]);
 		if (n > INT_MAX || n < INT_MIN)
 		{
-			free_list(a);
 			free_args(args);
+			free_list(a);
 		}
 		if (check_duplicate(*a, ((int)n)) == 1)
 		{
-			free_list(a);
 			free_args(args);
+			free_list(a);
 		}
 		attach_node(a, (int)n);
 		i++;

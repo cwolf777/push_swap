@@ -6,7 +6,7 @@
 /*   By: cwolf <cwolf@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/10/14 10:19:09 by cwolf             #+#    #+#             */
-/*   Updated: 2025/01/09 10:09:43 by cwolf            ###   ########.fr       */
+/*   Updated: 2025/01/09 11:58:49 by cwolf            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,8 +14,8 @@
 
 static int		count_words(char const *s, char c);
 static int		load_strings(char **arr, char const *s, char c);
-static char		*malloc_str(int len, int i, char **arr);
-static void		free_arr(char **arr, int count);
+static char		*malloc_str(int len, char **arr);
+static void		free_arr(char **arr);
 
 char	**ft_split(char const *s, char c)
 {
@@ -39,7 +39,7 @@ char	**ft_split(char const *s, char c)
 	arr[words] = NULL;
 	if (load_strings(arr, s, c) == 0)
 	{
-		free_arr(arr, words);
+		free_arr(arr);
 		return (NULL);
 	}
 	return (arr);
@@ -81,7 +81,7 @@ static	int	load_strings(char **arr, char const *s, char c)
 		}
 		if (len > 0)
 		{
-			arr[i] = malloc_str(len + 1, i, arr);
+			arr[i] = malloc_str(len + 1, arr);
 			if (arr[i] == NULL)
 				return (0);
 			ft_strlcpy(arr[i], s - len, len + 1);
@@ -91,33 +91,27 @@ static	int	load_strings(char **arr, char const *s, char c)
 	return (1);
 }
 
-static char	*malloc_str(int len, int i, char **arr)
+static char	*malloc_str(int len, char **arr)
 {
 	char	*str;
 
 	str = malloc(sizeof(char) * len);
 	if (str == NULL)
 	{
-		i = i - 1;
-		while (i >= 0)
-		{
-			free(arr[i]);
-			i--;
-		}
+		free_arr(arr);
 		return (NULL);
 	}
 	return (str);
 }
 
-static void	free_arr(char **arr, int count)
+static void	free_arr(char **arr)
 {
 	int	i;
 
 	i = 0;
-	while (i < count)
+	while (arr[i] != NULL)
 	{
-		if (arr[i] != NULL)
-			free(arr[i]);
+		free(arr[i]);
 		i++;
 	}
 	free(arr);
