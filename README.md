@@ -1,5 +1,5 @@
 📦 push_swap
-This repository contains a solution to the push_swap project from the **fthird circle** of the **42 school curriculum**.
+This repository contains a solution to the push_swap project from the **third circle** of the **42 school curriculum**.
 It focuses on algorithm design, data structures, and efficient sorting under strict operational constraints.
 
 🚀 Project Overview
