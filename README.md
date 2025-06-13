@@ -8,7 +8,7 @@ The challenge lies in producing the most efficient sorting sequence possible (i.
 
 This implementation includes:
 
-🔁 Custom sorting algorithm inspired by the Turk Algorithm
+🔁 Custom sorting algorithm inspired by the [Turk Algorithm](https://medium.com/@ayogun/push-swap-c1f5d2d41e97)
 
 📦 Custom linked list structures to represent stacks
 
@@ -16,4 +16,3 @@ This implementation includes:
 
 🛠️ Reused core library components via a modular libft repository
 
-- 🔁 **Sorting algorithm** inspired by the [Turk Algorithm](https://medium.com/@ayogun/push-swap-c1f5d2d41e97)
