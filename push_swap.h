@@ -6,7 +6,7 @@
 /*   By: cwolf <cwolf@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/11/15 10:07:51 by cwolf             #+#    #+#             */
-/*   Updated: 2025/01/09 10:00:11 by cwolf            ###   ########.fr       */
+/*   Updated: 2025/06/13 17:41:47 by cwolf            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -75,9 +75,9 @@ void		rotate_both_b(t_ps_list **a, t_ps_list **b,
 				t_ps_list *cheapest_node);
 void		reverse_rotate_both_b(t_ps_list **a, t_ps_list **b,
 				t_ps_list *cheapest_node);
-void		free_list_end(t_ps_list **a);
+void		free_list(t_ps_list **a);
 void		free_args(char **args);
 void		init_list_malloced(t_ps_list **a, char **args);
-void		sorting_part(t_ps_list **a, t_ps_list **b);
+void		execute_sorting(t_ps_list **a, t_ps_list **b);
 
 #endif
